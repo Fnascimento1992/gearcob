@@ -14,7 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('acordos', function (Blueprint $table) {
-            $table->id();
+            $table->id()->autoIncrement();
+            $table->float('valor_inicial');//Refatorar casas decimais
+            $table->float('desconto_acordo');//Refatorar casas decimais
+            $table->string('status_acordo');
             $table->timestamps();
         });
     }

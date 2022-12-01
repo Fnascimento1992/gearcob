@@ -14,7 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('perfil_acessos', function (Blueprint $table) {
-            $table->id();
+            $table->id()->autoIncrement();
+            $table->string('adm');
+            $table->string('visualizador');
+            $table->string('cliente');
             $table->timestamps();
         });
     }

@@ -13,8 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
+        //Refatorar para mais colunas no futuro;
         Schema::create('dividas', function (Blueprint $table) {
-            $table->id();
+            $table->id()->autoIncrement();
+            $table->string('nome_empresa_cedente');
+            $table->bigInteger('numero_contrato');
+            $table->integer('id_cliente');
             $table->timestamps();
         });
     }

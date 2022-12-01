@@ -14,7 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('cliente_inads', function (Blueprint $table) {
-            $table->id();
+            $table->integer('id')->autoIncrement();
+            $table->string('nome_cliente');
+            $table->string('cpf_cliente');
+            $table->integer('contato_cliente');
+            $table->integer('id_empresa_cedente');
+            $table->string('email_cliente');
             $table->timestamps();
         });
     }

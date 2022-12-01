@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\acordo;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreEmpresasRequest;
+use App\Http\Requests\UpdateEmpresasRequest;
+use App\Models\Empresas;
 
-class Acordos extends Controller
+class EmpresasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -30,10 +31,10 @@ class Acordos extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\StoreEmpresasRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreEmpresasRequest $request)
     {
         //
     }
@@ -41,10 +42,10 @@ class Acordos extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\
+     * @param  \App\Models\Empresas  $empresas
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show(Empresas $empresas)
     {
         //
     }
@@ -52,10 +53,10 @@ class Acordos extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\
+     * @param  \App\Models\Empresas  $empresas
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit(Empresas $empresas)
     {
         //
     }
@@ -63,11 +64,11 @@ class Acordos extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ 
+     * @param  \App\Http\Requests\UpdateEmpresasRequest  $request
+     * @param  \App\Models\Empresas  $empresas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(UpdateEmpresasRequest $request, Empresas $empresas)
     {
         //
     }
@@ -75,10 +76,10 @@ class Acordos extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\
+     * @param  \App\Models\Empresas  $empresas
      * @return \Illuminate\Http\Response
      */
-    public function destroy()
+    public function destroy(Empresas $empresas)
     {
         //
     }
