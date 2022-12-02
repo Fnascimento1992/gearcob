@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AcordosController;
+use App\Http\Controllers\DividasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/acordos',[AcordosController::class,'index']);
+Route::get('/dividas',[DividasController::class, 'inde']);
