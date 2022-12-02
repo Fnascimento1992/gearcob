@@ -21,3 +21,6 @@ Route::get('/', function () {
 
 Route::get('/acordos',[AcordosController::class,'index']);
 Route::get('/dividas',[DividasController::class, 'inde']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
